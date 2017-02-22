@@ -13,10 +13,16 @@ replace() {
     cp "$source" "$target"
 }
 
+tempdir=$(mktemp -d)
+
+cd $tempdir
+
 curl https://codeload.github.com/jmelis/devbootstrap/tar.gz/master | tar xz
 
-cd devbootstrap-master
+cd devbootstrap-master/files
 
 for file in `find . -mindepth 1`; do
     replace "$file"
 done
+
+rm -rf $tempdir
