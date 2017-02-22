@@ -17,7 +17,7 @@ tempdir=$(mktemp -d)
 
 cd $tempdir
 
-curl https://codeload.github.com/jmelis/devbootstrap/tar.gz/master | tar xz
+curl -s https://codeload.github.com/jmelis/devbootstrap/tar.gz/master | tar xz
 
 cd devbootstrap-master/files
 
