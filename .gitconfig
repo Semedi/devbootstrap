@@ -1,0 +1,33 @@
+[user]
+	name = Jaime Melis\n\n
+	email = jmelis@opennebula.org
+[color]
+	ui = auto
+	wtf = auto
+core]
+	excludesfile = /home/jmelis/.gitignore_global
+[diff]
+	tool = meld
+[push]
+	default = current
+[alias]
+    files   = diff-tree --no-commit-id --name-only -r
+	slog    = log --abbrev-commit --oneline
+	sl      = log --pretty=\"%C(yellow)%h%Creset %Cblue%an%Creset %s\"
+    cx      = cherry-pick -x
+	st      = status
+    br      = branch
+	s       = status
+	co      = checkout
+	nb      = checkout -b
+    ack     = !git-ack
+    find    = !git-find
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    lol = log --oneline --graph --decorate
+    lola = log --oneline --graph --decorate --all
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+    extgrep = "!f() { git ls-files }; f"
+[gui]
+	spellingdictionary = none
+[credential]
+	helper = cache
